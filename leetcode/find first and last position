@@ -1,0 +1,8 @@
+class Solution(object):
+    def searchRange(self, nums, target):
+        out=[0]*2
+        if nums.count(target)>0:
+            out[0]=nums.index(target)
+            out[1]=(len(nums)-1)-(sorted(nums,reverse=True).index(target))      
+        else:
+            out[0]=-1
